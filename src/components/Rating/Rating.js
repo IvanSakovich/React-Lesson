@@ -28,6 +28,7 @@ function Rating (props
           <Star selected={false}/>
           </div>)
       }
+      //sss
       if (props.value === 2) {
         return (<div>
           <Star selected={true}/>
