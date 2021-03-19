@@ -7,16 +7,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <AppTitle />
-      <Rating />
-      <Accordion />
+      <PageTitle title={"1"}/>
+      <Rating value={1}/>
+      <PageTitle title={"2"}/>
+      <Rating value={2}/>
+      <Accordion title={"a1"}/>
+      <Accordion title={"a2"}/>
     </div>
   );
 }
 
-function AppTitle() {
+function PageTitle(props) {
   return <div>
-    App Title
+    <h1>{props.title}</h1>
   </div>
 }
 

@@ -1,15 +1,15 @@
 import React from 'react';
 //import {v1} from 'uuid';
-function Accordion () {
+function Accordion (props) {
   return <div>
-    <AccordionTitle />
+    <AccordionTitle title={props.title}/>
     <AccordionBody />
   </div>
 }
 
-function AccordionTitle () {
+function AccordionTitle (props) {
   return <div>
-  <h3>Menu</h3>
+  <h3>{props.title}</h3>
   </div>
 }
 
