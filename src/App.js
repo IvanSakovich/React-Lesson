@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+//import {v1} from 'uuid';
+import Accordion from './components/Accordion/Accordion';
+import Rating from './components/Rating/Rating';
+const App = () => {
 
-function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PageTitle title={"1"}/>
+      <Rating value={1}/>
+      <PageTitle title={"2"}/>
+      <Rating value={2}/>
+      <Accordion title={"a1"}/>
+      <Accordion title={"a2"}/>
     </div>
   );
+}
+
+function PageTitle(props) {
+  return <div>
+    <h1>{props.title}</h1>
+  </div>
 }
 
 export default App;
