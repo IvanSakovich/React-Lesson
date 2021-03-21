@@ -1,0 +1,27 @@
+/* .itemOn {
+    background-color: props.on ? "green" : "red";
+    width: 30px;   
+    height: 30px;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.itemOff {
+    background-color: red;
+    width: 30px;   
+    height: 30px;
+    border: 1px solid black;
+    margin-left: 2px;
+    padding: 2px;
+}
+.itemO {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-color: lightcoral;
+    display: inline-block;
+    margin-left: 5px;
+    background-color: red;
+} */

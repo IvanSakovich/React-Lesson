@@ -1,11 +1,19 @@
 import React from 'react';
 //import {v1} from 'uuid';
+
 function Accordion (props) {
-  return <div>
+  // if (props.collapsed === true) {
+  //   return <div>
+  //   <AccordionTitle title={props.title}/>
+  // </div>
+  // } else {
+     return <div>
     <AccordionTitle title={props.title}/>
-    <AccordionBody />
+    { props.collapsed === false && <AccordionBody />}
   </div>
-}
+  }
+//}
+  
 
 function AccordionTitle (props) {
   return <div>
@@ -16,7 +24,7 @@ function AccordionTitle (props) {
 function AccordionBody () {
   return <div>
   <ul>
-      <li>1sas</li>
+      <li>1</li>
       <li>2</li>
       <li>3</li>
       <li>4</li>
