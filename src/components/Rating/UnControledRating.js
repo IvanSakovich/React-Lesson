@@ -5,7 +5,6 @@ import Star from './Star/Star';
 // type RatingProps = {
 //   value: number
 // }
-//test git commin in default branch
 
 function UnControledRating (props
   // : RatingProps
