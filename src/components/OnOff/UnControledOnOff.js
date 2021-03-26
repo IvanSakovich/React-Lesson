@@ -6,15 +6,16 @@ import s from './OnOff.module.css';
 //   value: number
 // }
 
-function OnOff(props
-               // : RatingProps
+function UnControledOnOff(props
+                          // : RatingProps
 ) {
 
     //let On = true;
 
+    let [On, setOn] = useState(false);
 
     const OnStyle = {
-        backgroundColor: props.On ? "green" : "white",
+        backgroundColor: On ? "green" : "white",
         width: "30px",
         height: "30px",
         border: "1px solid black",
@@ -22,7 +23,7 @@ function OnOff(props
     };
 
     const OffStyle = {
-        backgroundColor: props.On ? "white" : "red",
+        backgroundColor: On ? "white" : "red",
         width: "30px",
         height: "30px",
         border: "1px solid black",
@@ -38,20 +39,26 @@ function OnOff(props
         //boxSizing: "border-box",
         //display: "inlineBlock",
         marginLeft: "5px",
-        backgroundColor: props.On ? "green" : "red"
+        backgroundColor: On ? "green" : "red"
+    }
+
+    const onClicked = () => {
+        setOn(true)
+        props.onChange(true)
+    }
+
+    const OffClicked = () => {
+        setOn(false)
+        props.onChange(false)
     }
     return (<div>
-        <button onClick={() => {
-            props.onChange(true)
-        }} style={OnStyle} className={s.itemOn}>On
+        <button onClick={onClicked} style={OnStyle} className={s.itemOn}>On
         </button>
-        <button onClick={() => {
-            props.onChange(false)
-        }} style={OffStyle} className={s.itemOff}>Off
+        <button onClick={OffClicked} style={OffStyle} className={s.itemOff}>Off
         </button>
         <span style={OStyle} className={s.itemO}>XX</span>
     </div>)
 
 }
 
-export default OnOff;
+export default UnControledOnOff;

@@ -8,7 +8,8 @@ function Accordion (props) {
   // </div>
   // } else {
      return <div>
-    <AccordionTitle title={props.title}/>
+    <AccordionTitle title={props.title}
+    onChange={props.onChange}/>
     { props.collapsed === false && <AccordionBody />}
   </div>
   }
@@ -17,7 +18,7 @@ function Accordion (props) {
 
 function AccordionTitle (props) {
   return <div>
-  <h3>{props.title}</h3>
+  <h3 onClick={props.onChange}>{props.title}</h3>
   </div>
 }
 
