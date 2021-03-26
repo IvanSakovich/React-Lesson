@@ -1,30 +1,21 @@
 import React from 'react';
 //import {v1} from 'uuid';
-import Star from './Star/Star';
+import  StarRating from './Star/StarRating';
 
 // type RatingProps = {
 //   value: number
 // }
 
-function Rating (props
-  // : RatingProps
-  ) {
-  //  return ( <Star />)
+function Rating (props) {
       if (props.value === 0 | 1 | 2 | 3 | 4 | 5) {
         return (<div>
-          <Star selected={props.value > 0}/>
-          <Star selected={props.value > 1}/>
-          <Star selected={props.value > 2}/>
-          <Star selected={props.value > 3}/>
-          <Star selected={props.value > 4}/>
+          <StarRating selected={props.value > 0} onClick={props.onClick} value={1}/>
+          <StarRating selected={props.value > 1} onClick={props.onClick} value={2}/>
+          <StarRating selected={props.value > 2} onClick={props.onClick} value={3}/>
+          <StarRating selected={props.value > 3} onClick={props.onClick} value={4}/>
+          <StarRating selected={props.value > 4} onClick={props.onClick} value={5}/>
           </div>)
 }
-      return (<div>
-        <Star selected={false}/>
-        <Star selected={false}/>
-        <Star selected={false}/>
-        <Star selected={false}/>
-        <Star selected={false}/>
-        </div>)
+
 }
 export default Rating;
